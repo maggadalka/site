@@ -14,10 +14,18 @@ class View {
     }
 
     public function render($title, $vars = []) {
+        if (is_array($vars)) {
+            extract($vars);
+        }
         ob_start();
         require 'application/views/'.$this->path.'.php';
         $content = ob_get_clean();
         require 'application/views/layouts/'.$this->layout.'.php';
     }
 
+    public static function error($code) {
+        http_response_code($code);
+        require 'application/views/errors/'.$code.'.php';
+        exit;
+    }
 }

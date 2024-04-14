@@ -2,25 +2,26 @@
 
 namespace application\core;
 
-class Router {
+use Exception;
 
+class Router {
     protected $routes = [];
     protected $params = [];
 
     public function __construct() {
-        $arr = require 'application/config/routes.php';
+        $arr = require "application/config/routes.php";
         foreach ($arr as $key => $value) {
             $this->add($key, $value);
         }
     }
 
     protected function add($route, $params) {
-        $route = '#^'.$route.'$#';
+        $route = "#^".$route."$#";
         $this->routes[$route] = $params;
     }
 
     protected function match() {
-        $url = trim($_SERVER['REQUEST_URI'], '/');
+        $url = trim($_SERVER['REQUEST_URI'], "/");
         foreach ($this->routes as $route => $params) {
             if (preg_match($route, $url, $mathches)) {
                 $this->params = $params;
@@ -32,21 +33,14 @@ class Router {
 
     public function run() {
         if ($this->match()) {
-            $path = 'application\\controllers\\'.ucfirst($this->params['controller'].'Controller');
-            if (class_exists($path)) {
+            try {
+                $path = 'application\\controllers\\'.ucfirst($this->params['controller'].'Controller');
                 $controller = new $path($this->params);
                 $action = $this->params['action'].'Action';
-                if (method_exists($controller, $action)) {
-                    $controller->$action();
-                } else {
-                    echo '<p>action not exists: '.$action.'</p>';
-                }
-            } else {
-                echo '<p>Controller not exists: '.$path.'</p>';
+                $controller->$action();
+            } catch(Exception $ex) {
+                View::error(404);
             }
-        } else {
-            echo '<p>route not found</p>';
         }
     }
-
 }
