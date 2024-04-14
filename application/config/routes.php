@@ -2,7 +2,7 @@
 
 return [
 
-    //default route, alias index.html/php
+    //default route, alias to index.html/php
     '' => [
         'controller' => 'main',
         'action' => 'index'
