@@ -6,23 +6,23 @@ use application\core\Controller;
 class UserController extends Controller {
 
     public function loginAction() {
-        echo '<p>login</p>';
+        $this->view->render('Login');
     }
 
     public function registrationAction() {
-        echo '<p>registration</p>';
+        $this->view->render('Registration');
     }
 
     public function logoutAction() {
-        echo '<p>logout</p>';
+        $this->view->render('Logout');
     }
 
     public function profileAction() {
-        echo '<p>profile</p>';
+        $this->view->render('Profile');
     }
 
     public function cartAction() {
-        echo '<p>cart</p>';
+        $this->view->render('Cart');
     }
 
 }   

@@ -1,7 +1,7 @@
-
 @import url('https://fonts.googleapis.com/css?family=Onest&display=swap');
 
-body, html{
+body,
+html {
     font-family: Onest;
     background: linear-gradient(90deg, #66648a 0%, #ffffff 100%);
     font-size: 100%;
@@ -25,20 +25,41 @@ section {
     margin-bottom: 2%;
 }
 
-button.btn.btn-outline-success{
+button.btn.btn-outline-success {
     color: #ffffff;
 }
 
-.nav-link{
-    color: rgb(238, 227, 255);
+.nav-link {
+    color: rgb(238, 227, 255) !important;
+    transition: all 0.5s !important;
 }
 
-.navbar-nav .nav-link.active{
-    color:rgb(143, 143, 222);
+.nav-link:hover {
+    color: rgba(238, 227, 255, 0.473) !important;
+    transition: all 0.5s !important;
 }
 
-.navbar-brand img{
+.navbar-nav .nav-link.active {
+    color: rgb(143, 143, 222) !important;
+}
+
+.navbar-brand img {
     width: 40px;
+}
+
+.navbar-toggler-icon {
+    color: white !important;
+}
+
+.navbar-toggler-icon:active {
+    border: none;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
 }
 
 .check-order {
@@ -57,24 +78,24 @@ button.btn.btn-outline-success{
     line-height: 0.8%;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     background-color: rgb(171, 172, 174);
 }
 
-.sidebar{
+.sidebar {
     color: #43406c;
 }
 
-.card{
+.card {
     background: linear-gradient(300deg, #c3c1eb 0%, #ffffff 100%);
 }
 
-.card a{
+.card a {
     text-decoration: none;
     color: #000000;
 }
 
-.slide-text{
+.slide-text {
     color: rgb(19, 23, 50);
     margin: auto auto;
 }
@@ -84,21 +105,21 @@ footer {
     margin-top: 15px;
 }
 
-footer p{
+footer p {
     color: antiquewhite;
     margin-top: 20px;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #8983f1;
-    border-color: #8983f1 ;
+    border-color: #8983f1;
 }
 
-.btn{
-    color:#ffffff;
+.btn {
+    color: #ffffff;
 }
 
-.show-more{
+.show-more {
     background-color: #8983f1;
     border-style: none;
     padding: 10px 30px;
@@ -146,7 +167,7 @@ footer p{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    width:max-content;
+    width: max-content;
     margin: 0 auto;
     margin-right: 20%;
 }
@@ -156,9 +177,7 @@ footer p{
     font-size: larger;
 }
 
-.cart-item-price {
-
-}
+.cart-item-price {}
 
 .cart-item-image {
     width: 100%;
@@ -186,13 +205,13 @@ footer p{
     width: 50%;
 }
 
-.login{
+.login {
     margin: auto;
     width: 20%;
     margin-top: 10%;
 }
 
-.reg-footer{
+.reg-footer {
     position: absolute;
     bottom: 0;
     width: 100%;
