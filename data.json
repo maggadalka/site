@@ -1,0 +1,97 @@
+[
+    {
+        "id": 1,
+        "name": "Ноутбук",
+        "price": 1000000,
+        "image": "laptop.png",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 2,
+        "name": "Игровые ПК",
+        "price": 10000,
+        "image": "game_pc.jpg",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 3,
+        "name": "Клавиатуры",
+        "price": 10000,
+        "image": "keyboard.jpg",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 4,
+        "name": "Видеокарты",
+        "price": 10000,
+        "image": "gpu.jpg",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 5,
+        "name": "Контроллеры",
+        "price": 10000,
+        "image": "controlls.jpg",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 6,
+        "name": "Другое",
+        "price": 10000,
+        "image": "other.jpg",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 7,
+        "name": "Ноутбук",
+        "price": 1000000,
+        "image": "laptop.png",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 8,
+        "name": "Игровые ПК",
+        "price": 10000,
+        "image": "game_pc.jpg",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 9,
+        "name": "Клавиатуры",
+        "price": 10000,
+        "image": "keyboard.jpg",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 10,
+        "name": "Видеокарты",
+        "price": 10000,
+        "image": "gpu.jpg",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 11,
+        "name": "Контроллеры",
+        "price": 10000,
+        "image": "controlls.jpg",
+        "description": "Lorem"
+    },
+
+    {
+        "id": 12,
+        "name": "Другое",
+        "price": 10000,
+        "image": "other.jpg",
+        "description": "Lorem"
+    }
+]
