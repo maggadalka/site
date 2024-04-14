@@ -2,8 +2,6 @@
 
 namespace application\core;
 
-use Exception;
-
 class Router {
     protected $routes = [];
     protected $params = [];
@@ -32,15 +30,18 @@ class Router {
     }
 
     public function run() {
-        if ($this->match()) {
-            try {
-                $path = 'application\\controllers\\'.ucfirst($this->params['controller'].'Controller');
-                $controller = new $path($this->params);
-                $action = $this->params['action'].'Action';
-                $controller->$action();
-            } catch(Exception $ex) {
-                View::error(404);
-            }
+        if (!$this->match()) {
+            View::error(404);
         }
+        $path = 'application\\controllers\\'.ucfirst($this->params['controller'].'Controller');
+        if (!class_exists($path)) {
+            View::error(404);
+        }
+        $controller = new $path($this->params);
+        $action = $this->params['action'].'Action';
+        if (!method_exists($controller, $action)) {
+            View::error(404);
+        }
+        $controller->$action();
     }
 }
