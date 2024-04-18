@@ -19,13 +19,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Главная страница</a>
+                        <a class="nav-link active" aria-current="page" href="/">Главная страница</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pricing.html">Товары</a>
+                        <a class="nav-link" href="/catalog">Товары</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.html">Корзина товаров</a>
+                        <a class="nav-link" href="/user/cart">Корзина товаров</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">

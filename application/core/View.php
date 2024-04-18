@@ -28,4 +28,9 @@ class View {
         require 'application/views/errors/'.$code.'.php';
         exit;
     }
+
+    public function redirect($url) {
+        header("Location: ".$url);
+        exit; 
+    }
 }
